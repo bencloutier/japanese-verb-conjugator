@@ -1,5 +1,6 @@
 import React from 'react';
 import Edict from '../edict2u.json';
+import VerbTypes from './VerbTypes.jsx';
 import Styles from '../styles/Styles.scss';
 
 export default class SearchResults extends React.Component {
@@ -13,32 +14,13 @@ export default class SearchResults extends React.Component {
       matchingVerbs = verbs.reduce((acc, cur) => {
         if (acc.length < 10 && cur.indexOf(this.props.term) > -1) {
           const val = cur.substr(cur.indexOf('[') + 1, cur.indexOf(']') - cur.indexOf('[') - 1);
-          let type = '';
-          if (cur.indexOf('v1,') > -1 || cur.indexOf('v1)') > -1) {
-            type = 'v1';
-          } else if (cur.indexOf('v5b,') > -1 || cur.indexOf('v5b)') > -1) {
-            type = 'v5b';
-          } else if (cur.indexOf('v5g,') > -1 || cur.indexOf('v5g)') > -1) {
-            type = 'v5g';
-          } else if (cur.indexOf('v5k,') > -1 || cur.indexOf('v5k)') > -1) {
-            type = 'v5k';
-          } else if (cur.indexOf('v5m,') > -1 || cur.indexOf('v5m)') > -1) {
-            type = 'v5m';
-          } else if (cur.indexOf('v5n,') > -1 || cur.indexOf('v5n)') > -1) {
-            type = 'v5n';
-          } else if (cur.indexOf('v5r,') > -1 || cur.indexOf('v5r)') > -1) {
-            type = 'v5r';
-          } else if (cur.indexOf('v5s,') > -1 || cur.indexOf('v5s)') > -1) {
-            type = 'v5s';
-          } else if (cur.indexOf('v5t,') > -1 || cur.indexOf('v5t)') > -1) {
-            type = 'v5t';
-          } else if (cur.indexOf('v5u,') > -1 || cur.indexOf('v5u)') > -1) {
-            type = 'v5u';
-          }
+          const type = VerbTypes.reduce((acc, type) => {
+            if(cur.indexOf(type + ',') > -1 || cur.indexOf(type + ')' > -1)) {
+              return type;
+            };
+          }, '');
           if (val.indexOf('(') === -1 && val.length > 0 && type.length > 0) {
-            acc.push({
-              type, val
-            });
+            acc.push({type, val});
           }
         }
         return acc;
