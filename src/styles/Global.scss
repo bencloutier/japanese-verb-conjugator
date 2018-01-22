@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "HiraKakuProN-W3", "Hiragino Kaku Gothic ProN W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", "Meiryo", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+}
+
+p.subhead {
+  font-size: 1.5em;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  min-width: 320px;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.site-wrapper {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1024px;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
+
+input {
+  padding: .5rem;
+  width: 100%;
+  font-size: 24px;
+}
+
+ul {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+li {
+  padding: .5rem 0;
+  &:first-of-type {
+    padding-top: 0;
+  }
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}

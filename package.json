@@ -1,0 +1,42 @@
+{
+  "name": "japanese-verb-conjugator",
+  "version": "1.0.0",
+  "description": "Conjugates Japanese verbs.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencloutier/japanese-verb-conjugator.git"
+  },
+  "keywords": [
+    "japanese",
+    "grammar"
+  ],
+  "author": "Ben Cloutier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bencloutier/japanese-verb-conjugator/issues"
+  },
+  "homepage": "https://github.com/bencloutier/japanese-verb-conjugator#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.7.2",
+    "path": "^0.12.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
