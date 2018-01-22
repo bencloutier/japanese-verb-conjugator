@@ -6,7 +6,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="site-wrapper">
-        <header>
+        <header className="text-center">
           <h1>Japanese Verb Conjugation Tool</h1>
           <p className="subhead">Converts regular ichidan and godan verbs into their masu form</p>
           <h2>Instructions</h2>
@@ -15,6 +15,9 @@ export default class App extends React.Component {
         <main>
           <Search/>
         </main>
+        <footer>
+          <p className="legal">&copy; 2018 Ben Cloutier</p>
+        </footer>
       </div>
     );
   }

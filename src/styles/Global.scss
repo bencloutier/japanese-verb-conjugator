@@ -25,8 +25,13 @@ h2 {
   font-size: 2.5em;
 }
 
-p.subhead {
-  font-size: 1.5em;
+p {
+  &.subhead {
+    font-size: 1.5em;
+  }
+  &.legal {
+    font-size: .75em;
+  }
 }
 
 #root {
@@ -41,12 +46,7 @@ p.subhead {
   max-width: 1024px;
 }
 
-header {
-  padding: 1rem;
-  text-align: center;
-}
-
-main {
+header, main, footer {
   padding: 1rem;
 }
 
@@ -69,4 +69,8 @@ li {
   &:last-of-type {
     padding-bottom: 0;
   }
+}
+
+.text-center {
+  text-align: center;
 }
