@@ -14,10 +14,11 @@ export default class SearchResults extends React.Component {
       matchingVerbs = verbs.reduce((acc, cur) => {
         if (acc.length < 10 && cur.indexOf(this.props.term) > -1) {
           const val = cur.substr(cur.indexOf('[') + 1, cur.indexOf(']') - cur.indexOf('[') - 1);
-          const type = VerbTypes.reduce((acc, type) => {
-            if(cur.indexOf(type + ',') > -1 || cur.indexOf(type + ')' > -1)) {
-              return type;
+          const type = VerbTypes.reduce((acc2, cur2) => {
+            if(cur.indexOf(cur2 + ',') > -1 || cur.indexOf(cur2 + ')') > -1) {
+              return cur2;
             };
+            return acc2;
           }, '');
           if (val.indexOf('(') === -1 && val.length > 0 && type.length > 0) {
             acc.push({type, val});
