@@ -6,12 +6,15 @@ import Styles from '../styles/Styles.scss';
 export default class SearchResults extends React.Component {
   constructor(props) {
     super(props);
+
+    this.parseDict = this.parseDict.bind(this);
+    this.matchingVerbs = [];
   }
-  render() {
+
+  parseDict() {
     const verbs = Edict.data;
-    let matchingVerbs = [];
     if (this.props.term.length > 0) {
-      matchingVerbs = verbs.reduce((acc, cur) => {
+      this.matchingVerbs = verbs.reduce((acc, cur) => {
         if (acc.length < 10 && cur.indexOf(this.props.term) > -1) {
           const val = cur.substr(cur.indexOf('[') + 1, cur.indexOf(']') - cur.indexOf('[') - 1);
           const type = VerbTypes.reduce((acc2, cur2) => {
@@ -27,13 +30,16 @@ export default class SearchResults extends React.Component {
         return acc;
       }, []);
     }
+  }
 
+  render() {
+    this.parseDict();
     return (
       <div>
-        { matchingVerbs.length > 0 ? (
+        { this.matchingVerbs.length > 0 ? (
           <ul>
             {
-              matchingVerbs.map(verb => {
+              this.matchingVerbs.map((verb, idx) => {
                 let ret;
                 switch (verb.type) {
                   case 'v1':
@@ -58,7 +64,7 @@ export default class SearchResults extends React.Component {
                     ret = verb.val + ' => ' + verb.val.replace(/う$/,'います'); break;
                   default: break;
                 }
-                return (<li>{ret}</li>);
+                return (<li key={idx}>{ret}</li>);
               })
             }
           </ul>
