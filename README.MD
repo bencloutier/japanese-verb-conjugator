@@ -7,6 +7,8 @@
 After downloading the repository, run:
 
     yarn; yarn start
+or
+    npm install; npm start
 
 Webpack will open a server that runs the application. Usage instructions are included inside the app itself.
 
