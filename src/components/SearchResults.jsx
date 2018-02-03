@@ -12,6 +12,7 @@ export default class SearchResults extends React.Component {
   }
 
   parseDict() {
+    this.matchingVerbs = [];
     const verbs = Edict.data;
     if (this.props.term.length > 0) {
       this.matchingVerbs = verbs.reduce((acc, cur) => {
