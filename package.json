@@ -16,7 +16,7 @@
     "grammar"
   ],
   "author": "Ben Cloutier",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bencloutier/japanese-verb-conjugator/issues"
   },
@@ -46,7 +46,9 @@
     "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
     "requirejs": "^2.3.5",
+    "rxjs": "^5.5.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",

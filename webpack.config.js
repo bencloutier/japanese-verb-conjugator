@@ -9,6 +9,10 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: './src/index.js',
+  devServer: {
+    port: 8080,
+    historyApiFallback: true
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
