@@ -24,29 +24,217 @@ export default class Verb extends React.Component {
     let ret;
     switch (type) {
       case 'v1':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/る$/,'ます'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/る$/,'ない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/る$/,'ます')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/る$/,'ません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/る$/,'た')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/る$/,'なかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/る$/,'ました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/る$/,'ませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5b':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/ぶ$/,'びます'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/ぶ$/,'ばない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/ぶ$/,'びます')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/ぶ$/,'びません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/ぶ$/,'びた')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/ぶ$/,'ばなかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/ぶ$/,'びました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/ぶ$/,'びませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5g':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/ぐ$/,'ぎます'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/ぐ$/,'がない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/ぐ$/,'ぎます')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/ぐ$/,'ぎません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/ぐ$/,'いだ')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/ぐ$/,'がなかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/ぐ$/,'ぎました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/ぐ$/,'ぎませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5k':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/く$/,'きます'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/く$/,'かない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/く$/,'きます')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/く$/,'きません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/く$/,'いた')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/く$/,'かなかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/く$/,'きました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/く$/,'きませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5m':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/む$/,'みます'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/む$/,'まない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/む$/,'みます')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/む$/,'みません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/む$/,'んだ')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/む$/,'まなかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/む$/,'みました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/む$/,'みませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5n':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/ぬ$/,'にます'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/ぬ$/,'なない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/ぬ$/,'にます')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/ぬ$/,'にません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/ぬ$/,'んだ')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/ぬ$/,'ななかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/ぬ$/,'にました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/ぬ$/,'みませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5r':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/る$/,'ります'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/る$/,'らない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/る$/,'ります')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/る$/,'りません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/る$/,'った')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/る$/,'らなかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/る$/,'りました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/る$/,'りませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5s':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/す$/,'します'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/す$/,'さない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/す$/,'します')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/す$/,'しません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/す$/,'した')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/す$/,'さなかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/す$/,'しました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/す$/,'しませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5t':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/つ$/,'ちます'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/つ$/,'たない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/つ$/,'ちます')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/つ$/,'ちません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/つ$/,'った')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/つ$/,'たなかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/つ$/,'ちました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/つ$/,'ちませんでした')}</dd>
+          </dl>
+        ); break;
       case 'v5u':
-        ret = this.props.verb + ' => ' + this.props.verb.replace(/う$/,'います'); break;
+        ret = (
+          <dl>
+            <dt>Plain</dt>
+            <dd>{this.props.verb}</dd>
+            <dt>Negative</dt>
+            <dd>{this.props.verb.replace(/う$/,'わない')}</dd>
+            <dt>Polite</dt>
+            <dd>{this.props.verb.replace(/う$/,'います')}</dd>
+            <dt>Polite negative</dt>
+            <dd>{this.props.verb.replace(/う$/,'いません')}</dd>
+            <dt>Past</dt>
+            <dd>{this.props.verb.replace(/う$/,'った')}</dd>
+            <dt>Past Negative</dt>
+            <dd>{this.props.verb.replace(/う$/,'わなかった')}</dd>
+            <dt>Past Polite</dt>
+            <dd>{this.props.verb.replace(/う$/,'いました')}</dd>
+            <dt>Past Polite Negative</dt>
+            <dd>{this.props.verb.replace(/う$/,'いませんでした')}</dd>
+          </dl>
+        ); break;
       default: break;
     }
-    return (
-      <p>{ret}</p>
-    );
+    return ret;
   }
 }

@@ -7,7 +7,7 @@ import Styles from '../styles/Styles.scss';
 export default class App extends React.Component {
   render() {
     return (
-      <Router>
+      <Router basename="/#/">
         <div className="site-wrapper">
           <Route exact path="/" render={() => (
             <div>
