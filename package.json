@@ -46,6 +46,7 @@
     "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
     "requirejs": "^2.3.5",
     "rxjs": "^5.5.6",
     "sass-loader": "^6.0.6",
